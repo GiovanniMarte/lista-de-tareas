@@ -1,0 +1,225 @@
+@font-face {
+  font-family: 'Geomanist';
+  src: url('../fonts/geomanist/geomanist-book.eot');
+  src: url('../fonts/geomanist/geomanist-book.eot?#iefix') format('embedded-opentype'), url('../fonts/geomanist/geomanist-book.woff2') format('woff2'),
+    url('../fonts/geomanist/geomanist-book.woff') format('woff'), url('../fonts/geomanist/geomanist-book.ttf') format('truetype'),
+    url('../fonts/geomanist/geomanist-book.svg#geomanist-book') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  font-family: 'Geomanist';
+  font-size: 14px;
+  font-weight: normal;
+  letter-spacing: 0.2px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: rgb(232, 236, 240);
+}
+
+.header {
+  margin: 0;
+  background-color: rgb(74, 105, 119);
+  padding: 20px;
+  text-align: center;
+}
+
+.title {
+  margin: 0;
+  color: white;
+  font-size: 1.4em;
+}
+
+.container {
+  padding: 30px 0;
+}
+
+.todo {
+  width: 450px;
+  margin: 0 auto;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 3px rgb(201, 201, 201);
+}
+
+.todo-header {
+  box-shadow: inset 0 3px 3px #d2d5da;
+  padding: 10px 20px 10px 20px;
+}
+
+.todo-header div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.todo-header p {
+  color: #808080;
+}
+
+.todo-title,
+.todo-title span {
+  margin: 5px 0;
+  color: #5a5a5a;
+  font-size: 24px;
+  letter-spacing: 0.2px;
+  font-weight: normal;
+}
+
+.todo-clear {
+  border: 0;
+  border-radius: 3px;
+  height: 2rem;
+  color: rgb(95, 95, 95);
+  transition: box-shadow 0.2s, color 0.2s, background-color 0.1s;
+}
+
+.todo-clear:hover {
+  box-shadow: 0 2px #ff2929;
+  color: #ff2929;
+  cursor: pointer;
+}
+
+.todo-clear:active {
+  background-color: #c9c9c9;
+}
+
+.todo-form {
+  padding-bottom: 20px;
+  text-align: center;
+}
+
+.todo-form input[name='todo'] {
+  width: 85%;
+  height: 2rem;
+  padding: 7px 12px;
+  border: 1px solid #bebebe;
+  border-radius: 5px;
+  outline: none;
+  transition: box-shadow 0.2s;
+  color: #4e4e4e;
+}
+
+.todo-form input[name='todo']:focus {
+  box-shadow: 0 0 0 3px #cff1e2;
+  border-color: #24b373;
+}
+
+.todo-form input[name='todo']::placeholder {
+  color: #8d8d8d;
+}
+
+.todo-list {
+  padding: 0;
+  margin: 0;
+}
+
+.todo-list li:last-child {
+  border: 0;
+}
+
+.todo-list li {
+  list-style-type: none;
+  border-bottom: 1px solid #d8d8d8;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.editing {
+  box-shadow: inset 0 2px 2px #d2d5da;
+  box-sizing: border-box;
+  background-color: #f8f8f8;
+}
+
+.editing input {
+  background-color: #f8f8f8;
+}
+
+.todo-list li input[type='text'] {
+  border: 0;
+  color: #4e4e4e;
+  font-size: 1.1rem;
+  outline: none;
+  text-align: center;
+  width: 90%;
+  padding: 0;
+}
+
+.todo-list li input[type='checkbox'] {
+  -webkit-appearance: none;
+  margin: 2px 0 0 0;
+  padding: 0;
+  border: 1px solid #d2d5da;
+  background: #ffff;
+  border-radius: 3px;
+  width: 16px;
+  height: 16px;
+  outline: none;
+}
+
+.todo-list li input[type='checkbox']:checked {
+  background: #24b373 url('../img/done.svg') no-repeat center;
+  background-size: contain;
+  border-color: #24b373;
+}
+.todo-list li input[type='checkbox']:focus {
+  border-color: #24b373;
+  box-shadow: 0 0 0 3px #cff1e2;
+}
+
+.clear {
+  background: url('../img/delete.svg') no-repeat center;
+  background-color: transparent;
+  border: none;
+  width: 20px;
+  height: 20px;
+  transition: background 0.2s;
+}
+
+.clear:hover {
+  background: url('../img/delete-full.svg') no-repeat center;
+  cursor: pointer;
+}
+
+.todo-list .todo-complete input[type='text'] {
+  text-decoration: line-through;
+  color: #939aab;
+}
+
+.todo-tabs {
+  padding: 10px 0;
+  color: #3b3b3b;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.todo-tab {
+  padding: 10px;
+  border-radius: 20px;
+  transition: background-color 0.2s, color 0.2s, box-shadow 0.2s, transform 0.2s;
+}
+
+.todo-tab:hover {
+  color: #15af6a;
+  box-shadow: 0 2px #007c4498;
+  cursor: pointer;
+}
+
+.todo-tab:active {
+  transform: translateY(2px);
+  box-shadow: none;
+}
+
+.tab-active {
+  background-color: #dff7ec;
+  color: #15af6a;
+  box-shadow: 0 2px #007c4498;
+}

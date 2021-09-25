@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo.js</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <p class="title">Lista de tareas</p>
+    </header>
+    <div class="container">
+      <div class="todo">
+        <div class="todo-tabs">
+          <div id="0" class="todo-tab">Grupo 1</div>
+          <div id="1" class="todo-tab">Grupo 2</div>
+          <div id="2" class="todo-tab">Grupo 3</div>
+          <div id="3" class="todo-tab">Grupo 4</div>
+          <div id="4" class="todo-tab">Grupo 5</div>
+        </div>
+        <div class="todo-header">
+          <h2 class="todo-title">Grupo <span></span></h2>
+          <div>
+            <p>Tienes <span class="todo-count">0</span> tareas por hacer</p>
+            <button type="button" class="todo-clear">Borrar completados</button>
+          </div>
+        </div>
+        <form class="todo-form" id="todos">
+          <input type="text" placeholder="¿Que será lo siguiente?" name="todo" />
+        </form>
+        <form class="todo-list-form" id="todos-list">
+          <ul class="todo-list"></ul>
+        </form>
+      </div>
+    </div>
+    <script src="src/index.js"></script>
+  </body>
+</html>
